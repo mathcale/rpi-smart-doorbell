@@ -12,5 +12,7 @@
   "scripts": {
     "start": "node src/index.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "onoff": "^6.0.3"
+  }
 }
