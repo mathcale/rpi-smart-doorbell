@@ -17,6 +17,8 @@
     "dotenv": "^10.0.0",
     "node-fetch": "^2.6.1",
     "onoff": "^6.0.3",
-    "pi-camera-connect": "^0.3.4"
+    "pi-camera-connect": "^0.3.4",
+    "pino": "^6.11.3",
+    "pino-pretty": "^5.0.2"
   }
 }
