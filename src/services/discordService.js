@@ -1,4 +1,5 @@
 const fetch = require('node-fetch').default;
+const { logger } = require('../utils');
 
 const discordService = {
   buildPayload: (imageUrl) => ({
@@ -15,7 +16,7 @@ const discordService = {
     }],
   }),
   sendMessage: async (payload) => {
-    console.info('Sending message to Discord channel...');
+    logger.info('Sending message to Discord channel...');
 
     const response = await fetch(process.env.DISCORD_WEBHOOK_URL, {
       method: 'POST',
@@ -30,7 +31,7 @@ const discordService = {
       throw new Error(error);
     }
 
-    console.info('Message sent!');
+    logger.info('Message sent!');
   },
 };
 

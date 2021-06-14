@@ -3,12 +3,13 @@ const Gpio = require('onoff').Gpio;
 
 const discordService = require('./services/discordService');
 const cameraService = require('./services/cameraService');
+const { logger } = require('./utils');
 
 const button = new Gpio(17, 'in', 'both');
 
 button.watch(async (err, value) => {
   if (err) {
-    console.error('[ERROR] button.watch:', err);
+    logger.error('[ERROR] button.watch:', err);
     return;
   }
 
@@ -22,7 +23,7 @@ button.watch(async (err, value) => {
 
     await discordService.sendMessage(payload);
   } catch (err) {
-    console.error(err);
+    logger.error(err);
   }
 });
 
@@ -30,4 +31,4 @@ process.on('SIGINT', () => {
   button.unexport();
 });
 
-console.info('App is running!');
+logger.info('App is running!');
