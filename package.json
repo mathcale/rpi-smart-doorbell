@@ -1,0 +1,16 @@
+{
+  "name": "rpi-node-doorbell",
+  "version": "1.0.0",
+  "description": "",
+  "author": {
+    "name": "Matheus Calegaro",
+    "email": "hello@matheus.me",
+    "url": "https://matheus.me"
+  },
+  "license": "ISC",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {}
+}
