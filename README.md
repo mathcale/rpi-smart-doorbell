@@ -50,13 +50,16 @@ $ ./scripts/deploy.sh
 $ ssh pi@pizero.local
 
 # 3. Navigate to project directory
-$ cd ~/dev/rpi-node-doorbell
+$ cd ~/dev/rpi-smart-doorbell
 
 # 4. Install dependencies
 $ npm install
 
-# 5. Run!
-$ npm start
+# 5. Run program on background, sending logs to a file
+$ npm start &>> /tmp/doorbell.log &
+
+# 6. (OPTIONAL) Watch the logs with Tail:
+$ tail -f /tmp/doorbell.log
 ```
 
 ### Running on system startup
