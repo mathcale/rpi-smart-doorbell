@@ -9,6 +9,6 @@ rsync \
   --exclude .git \
   --exclude scripts \
   . \
-  pi@pizero.local:~/dev/rpi-node-doorbell
+  pi@pizero.local:~/dev/rpi-smart-doorbell
 
 echo "Done in ${SECONDS}s"
