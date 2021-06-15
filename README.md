@@ -5,7 +5,7 @@
 
 ## How it works?
 
-First we need to listen for interactions with the button plugged on GPIO port `17`. Then, when the button has a `HIGH` value (represented as a binary `1`), we invoke `raspistill` via the `pi-camera-connect` module to take a picture and stored it locally and then upload to Cloudinary. With that done, a message is sent to a private Discord channel through a Webhook that will show who's at the door.
+First we need to listen for interactions with the button plugged on GPIO port `17`. Then, when the button has a `HIGH` value (represented as a binary `1`), we invoke `raspistill` via the `pi-camera-connect` module to take a picture, store it locally and upload to [Cloudinary](https://cloudinary.com/). With that done, a message is sent to a private Discord channel through a Webhook that will show who's at the door.
 
 ## Hardware
 
